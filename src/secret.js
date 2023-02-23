@@ -1,3 +1,13 @@
+/*
+ * @Author: liuhanchuan 
+ * @Date: 2023-02-23 11:01:29 
+ * @Last Modified by: liuhanchuan
+ * @Last Modified time: 2023-02-23 11:05:08
+ * AES加密 编码base64|hex 模式ECB 填充Pkcs7 密钥 偏移量
+ * 值word 密钥key 偏移量iv
+ * 在线加密解密地址https://www.mklab.cn/utils/aes
+ */
+
 import CryptoJS from 'crypto-js'
 
 //Base64解密方法
