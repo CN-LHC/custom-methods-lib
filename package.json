@@ -1,0 +1,38 @@
+{
+  "name": "custom-methods-lib",
+  "version": "1.0.0",
+  "description": "自定义方法库，用于个人日常工作",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c cross-env NODE_ENV=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CN-LHC/custom-methods-lib.git"
+  },
+  "keywords": [
+    "custom",
+    "method",
+    "methods-lib"
+  ],
+  "author": "liuhanchuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CN-LHC/custom-methods-lib/issues"
+  },
+  "homepage": "https://github.com/CN-LHC/custom-methods-lib#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@rollup/plugin-json": "^5.0.1",
+    "rollup": "^2.78.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
