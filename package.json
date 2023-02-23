@@ -2,7 +2,8 @@
   "name": "custom-methods-lib",
   "version": "1.0.0",
   "description": "自定义方法库，用于个人日常工作",
-  "main": "index.js",
+  "files": ["lib"],
+  "main": "lib/index.js",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c cross-env NODE_ENV=production"
