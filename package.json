@@ -1,8 +1,8 @@
 {
   "name": "custom-methods-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "自定义方法库，用于个人日常工作",
-  "files": ["lib"],
+  "files": ["lib", "src/depend_modules"],
   "main": "lib/index.js",
   "scripts": {
     "dev": "rollup -c -w",
