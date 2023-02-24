@@ -71,7 +71,7 @@ export function randomRgbaColor() { //随机生成RGBA颜色
 /*
  * rgb value to hsl 色相(H)、饱和度(S)、明度(L)
  */
-function rgbToHsl(rgbStr){
+export function rgbToHsl(rgbStr){
     let [r, g, b] = hex2Rgb(rgbStr);
     r /= 255, g /= 255, b /= 255;
     let max = Math.max(r, g, b), min = Math.min(r, g, b);
