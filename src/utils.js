@@ -73,3 +73,37 @@ export function GET_URL_PARAMS(url) {
     }
     return obj;
 }
+
+// 通过MessageChannel的方式实现
+export function deepClone(obj) {
+  return new Promise((resolve) => {
+    const { port1, port2 } = new MessageChannel
+    port1.postMessage(obj)
+    port2.onmessage((e) => {
+      resolve(e.data)
+    })
+  })
+}
+// 传统方式实现
+// 1、检查要复制的对象是否为 null 或非对象类型，如果是，直接返回该值。如果不是，继续执行下一步。
+// 2、创建一个新的对象或数组，用于存储复制后的值。如果原始对象是数组，创建一个新数组，否则创建一个新对象。
+// 3、遍历原始对象的所有属性，包括可枚举和不可枚举属性。对于每个属性，执行以下步骤：
+//    a. 检查该属性是否是对象或数组。如果是，递归地调用深拷贝函数，将该属性的值复制到新的对象或数组中。
+//    b. 如果不是对象或数组，直接将该属性的值复制到新的对象或数组中。
+// 4、返回新的对象或数组，完成深拷贝操作。
+
+// 返回新的对象或数组，完成深拷贝操作。
+export function deepCopy(obj) {
+  if (obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+  let copy = Array.isArray(obj) ? [] : {};
+  for (let key in obj) {
+    // 使用 hasOwnProperty 方法来判断属性是否为对象本身的属性，而不是原型链上的属性
+    if (obj.hasOwnProperty(key)) {
+      copy[key] = deepCopy(obj[key]);
+    }
+  }
+  // 由于copy是引用类型，就算return发生在递归结束之前，最后获取到的结果也会是最终值
+  return copy;
+}

@@ -2,7 +2,7 @@
  * @Author: liuhanchuan 
  * @Date: 2023-02-23 11:05:19 
  * @Last Modified by: liuhanchuan
- * @Last Modified time: 2023-02-24 15:24:29
+ * @Last Modified time: 2023-02-28 14:16:43
  * 导出方法，通过script commonjs esmodule 方式引入
  */
 // AES加密解密
@@ -14,7 +14,7 @@ import { setCookie, getCookie, delCookie, clearAllCookie } from './cookie'
 // 文件相关
 import { downLoadFile, downLoadImg, getImageDataURL, dataURLtoFile, compressImg, getVideoCover } from './fileDownLoad'
 // 通用
-import { copyText, sleep, debounce, toPercent, GET_URL_PARAMS } from './utils'
+import { copyText, sleep, debounce, toPercent, GET_URL_PARAMS, deepClone, deepCopy } from './utils'
 // 订阅发布
 import pubSub from './pubSub'
 export default {
@@ -22,6 +22,6 @@ export default {
     hex2Rgb, rgb2Hex, randomHexColor, randomRgbColor, randomRgbaColor, rgbToHsl, isColorDarkOrLight,
     setCookie, getCookie, delCookie, clearAllCookie,
     downLoadFile, downLoadImg, getImageDataURL, dataURLtoFile, compressImg, getVideoCover,
-    copyText, sleep, debounce, toPercent, GET_URL_PARAMS,
+    copyText, sleep, debounce, toPercent, GET_URL_PARAMS, deepClone, deepCopy
     pubSub,
 }
