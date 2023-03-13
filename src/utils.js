@@ -104,6 +104,6 @@ export function deepCopy(obj) {
       copy[key] = deepCopy(obj[key]);
     }
   }
-  // 由于copy是引用类型，就算return发生在递归结束之前，最后获取到的结果也会是最终值
+  // return由于递归执行了deepCopy方法，会执行多次
   return copy;
 }

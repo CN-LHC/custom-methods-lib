@@ -2,7 +2,7 @@
  * @Author: liuhanchuan 
  * @Date: 2023-02-23 11:05:19 
  * @Last Modified by: liuhanchuan
- * @Last Modified time: 2023-02-28 14:16:43
+ * @Last Modified time: 2023-03-03 14:00:11
  * 导出方法，通过script commonjs esmodule 方式引入
  */
 // AES加密解密
@@ -22,6 +22,6 @@ export default {
     hex2Rgb, rgb2Hex, randomHexColor, randomRgbColor, randomRgbaColor, rgbToHsl, isColorDarkOrLight,
     setCookie, getCookie, delCookie, clearAllCookie,
     downLoadFile, downLoadImg, getImageDataURL, dataURLtoFile, compressImg, getVideoCover,
-    copyText, sleep, debounce, toPercent, GET_URL_PARAMS, deepClone, deepCopy
+    copyText, sleep, debounce, toPercent, GET_URL_PARAMS, deepClone, deepCopy,
     pubSub,
 }
