@@ -34,6 +34,28 @@ export function downLoadImg(downloadName, url, callback) {
         };
     }
 }
+// 图片url格式转为File
+export function imgUrlToFile(img, callback) {
+  let fileName = img.split('/').pop();
+  let type = fileName.split('.').pop();
+  dataURLtoBlob(img, function(blobData) {
+      let file = new File([blobData], fileName, {type: 'image/'+type});
+      callback(file);
+  });
+}
+// 图片url格式转为blob格式
+export function dataURLtoBlob(dataurl, callback) {
+  let xhr = new XMLHttpRequest();
+  xhr.open("get", dataurl, true);
+  xhr.responseType = "blob";
+  xhr.onload = function (res) {
+      if (this.status == 200) {
+          let blob = this.response;
+          callback(blob);
+      }
+  }
+  xhr.send();
+}
 // 将图片资源转化为base64
 export function getImageDataURL(image) {
     // 创建画布
